@@ -84,6 +84,7 @@ public class TemplateMatching {
         for (int level = maxLevel; level >= 0; level--) {
             // 放缩图片
             List<Match> currentMatchResult = new ArrayList<>();
+            //获取两层的下一层的金字塔
             Mat src = getPyramidDownAtLevel(img, level);
             Mat currentTemplate = getPyramidDownAtLevel(template, level);
             // 如果在上一轮中没有匹配到图片，则考虑是否退出匹配
